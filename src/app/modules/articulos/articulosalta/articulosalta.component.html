@@ -1,0 +1,73 @@
+<div class="col-md-10 offset-md-1">
+
+    <div class="card border-secondary">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-sm-6">
+                    {{title}}
+                </div>
+               
+                <div class="col-sm-6">
+                    <p align="right">Clave:{{artserie}}</p> 
+                </div>
+            </div>
+            
+            
+        </div>
+       
+        <div class="card-body text-secondary">
+
+        <form class="form-horizontal" [formGroup]="articulosForm">
+            <div class="form-group row">
+            <label for="inputName" class="col-sm-2 col-form-label">Descripci&oacute;n:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputName" placeholder="descripcion" formControlName="descripcion">
+                <span
+                  *ngIf="articulosForm.controls['descripcion'].invalid && articulosForm.controls['descripcion'].touched"
+                  class="help-block text-danger"
+                  >Este campo es requerido</span>
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="inputapp" class="col-sm-2 col-form-label">Modelo:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputapp" placeholder="modelo" formControlName="modelo">
+                <span
+                  *ngIf="articulosForm.controls['modelo'].invalid && articulosForm.controls['modelo'].touched"
+                  class="help-block text-danger"
+                  >Este campo es requerido</span>
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="inputapm" class="col-sm-2 col-form-label">Precio:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputapm" placeholder="precio" formControlName="precio">
+                <span
+                  *ngIf="articulosForm.controls['precio'].invalid && articulosForm.controls['precio'].touched"
+                  class="help-block text-danger"
+                  >Este campo es requerido</span>
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="inputrfc" class="col-sm-2 col-form-label">Existencia:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputrfc" placeholder="existencia" formControlName="existencia">
+                <span
+                  *ngIf="articulosForm.controls['existencia'].invalid && articulosForm.controls['existencia'].touched"
+                  class="help-block text-danger"
+                  >Este campo es requerido</span>
+            </div>
+            </div>
+
+            <div class="col-sm-10 row">
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-primary" (click)="articuloConsulta()">Guardar</button>
+                </div>
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-primary" (click)="regresar()">cancelar</button>
+                </div>                
+            </div>
+        </form>
+        </div>
+    </div>
+</div>

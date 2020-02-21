@@ -1,0 +1,47 @@
+<div class="col-md-10 offset-md-1">
+
+    <div class="card border-secondary">
+        <div class="card-header">Configuraci&oacute;n General</div>
+        <div class="card-body text-secondary">
+
+        <form class="form-horizontal" [formGroup]="configuracionForm">
+            <div class="form-group row">
+            <label for="inputName" class="col-sm-2 col-form-label">Tasa Financiamiento:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputName" placeholder="tasa" formControlName="tasa">
+                <span
+                  *ngIf="configuracionForm.controls['tasa'].invalid && configuracionForm.controls['tasa'].touched"
+                  class="help-block text-danger"
+                  >Este campo es requerido</span>
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="inputapp" class="col-sm-2 col-form-label">% Enganche:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputapp" placeholder="enganche" formControlName="enganche">
+                <span
+                  *ngIf="configuracionForm.controls['enganche'].invalid && configuracionForm.controls['enganche'].touched"
+                  class="help-block text-danger"
+                  >Este campo es requerido</span>
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="inputapm" class="col-sm-2 col-form-label">Plazo M&aacute;ximo:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputapm" placeholder="plaza" formControlName="plaza">
+                <span
+                  *ngIf="configuracionForm.controls['plaza'].invalid && configuracionForm.controls['plaza'].touched"
+                  class="help-block text-danger"
+                  >Este campo es requerido</span>
+            </div>
+            </div>
+
+            <div class="col-sm-10 row">
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-primary" (click)="actualizarConfiguracion()">Guardar</button>
+                </div>          
+            </div>
+        </form>
+        </div>
+    </div>
+</div>

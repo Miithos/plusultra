@@ -1,0 +1,29 @@
+
+  <!-- Toolbar -->
+  <div class="extratoolbar" role="banner">
+    <div class="spacer"></div>
+    <span>La Vendimia</span>
+  </div>
+  <div class="toolbar" role="banner">
+  
+    <div class="dropdown" dropdown> <!-- {1} -->
+      <button dropdownToggle role="button" style="padding: 12px; background-color: #333; color: white;"> <!-- {2} -->
+        Inicio <span class="caret"></span></button>
+      <ul *dropdownMenu class="dropdown-menu"> <!-- {3} -->
+          <li><a href="#">Ventas</a></li>
+          <div class="dropdown-divider"></div>
+          <li><a routerLink="/clientes" routerLinkActive="active">Clientes</a></li>
+          <li><a routerLink="/articulos" routerLinkActive="active">Articulos</a></li>
+          <li><a routerLink="/configuracion" routerLinkActive="active">Configuraci&oacute;n</a></li>
+      </ul>
+    </div>
+    
+  
+    
+      <div class="spacer"></div>
+      <span>Fecha: {{ fecha }}</span>
+  </div>
+  <div class="espacio" role="banner">
+  </div>
+
+  

@@ -1,0 +1,40 @@
+<div class="row" >
+    <button class="btn btn-success" (click)="clienteNuevo()"> 
+        Nuevo Cliente
+    </button>
+
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col">
+        <h4>Clientes Registrados</h4>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>clave</td>
+                    <td>cliente</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of mGridCliente.data">
+                    <td>{{row.id}}</td>
+                    <td>{{row.nombre}}</td>
+                    <td> 
+                        <button type="button" class="btn btn-primary" (click)="editarcliente(row.id)">Editar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- <div class="form-group col-sm-2">
+            <label><b>Folio:</b></label>
+            <input type="text" class="form-control form-control-sm" maxlength="9" appRestringirTipo
+              [permitir]="'numeros'" formControlName="folio" (keyup.enter)="validarFolio()" #folioId>
+        </div>-->
+
+    </div>
+</div>

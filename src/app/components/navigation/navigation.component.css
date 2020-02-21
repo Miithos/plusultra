@@ -1,0 +1,26 @@
+ .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    font-weight: 600;
+  }
+
+  .espacio {
+    height: 30px;
+    background-color: white;
+  }
+  
+  .extratoolbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: lightgreen;
+    font-weight: 600;
+  }

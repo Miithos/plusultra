@@ -1,0 +1,70 @@
+<div class="col-md-10 offset-md-1">
+
+    <div class="card border-secondary">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-sm-6">
+                    {{title}}
+                </div>
+               
+                <div class="col-sm-6">
+                    <p align="right">Clave:{{clienteser}}</p> 
+                </div>
+            </div>
+        </div>
+        <div class="card-body text-secondary">
+
+        <form class="form-horizontal" [formGroup]="clientesForm">
+            <div class="form-group row">
+            <label for="inputName" class="col-sm-2 col-form-label">Nombre:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputName" placeholder="Nombre" formControlName="nombre">
+                <span
+                  *ngIf="clientesForm.controls['nombre'].invalid && clientesForm.controls['nombre'].touched"
+                  class="help-block text-danger"
+                  >Este campo es requerido</span>
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="inputapp" class="col-sm-2 col-form-label">Apellido Paterno:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputapp" placeholder="Apellido Paterno" formControlName="appaterno">
+                <span
+                  *ngIf="clientesForm.controls['appaterno'].invalid && clientesForm.controls['appaterno'].touched"
+                  class="help-block text-danger"
+                  >Este campo es requerido</span>
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="inputapm" class="col-sm-2 col-form-label">Apellido Materno:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputapm" placeholder="Apellido Materno" formControlName="apmaterno">
+                <span
+                  *ngIf="clientesForm.controls['apmaterno'].invalid && clientesForm.controls['apmaterno'].touched"
+                  class="help-block text-danger"
+                  >Este campo es requerido</span>
+            </div>
+            </div>
+            <div class="form-group row">
+            <label for="inputrfc" class="col-sm-2 col-form-label">RFC:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputrfc" placeholder="RFC" formControlName="rfc">
+                <span
+                  *ngIf="clientesForm.controls['rfc'].invalid && clientesForm.controls['rfc'].touched"
+                  class="help-block text-danger"
+                  >Este campo es requerido</span>
+            </div>
+            </div>
+
+            <div class="col-sm-10 row">
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-primary" (click)="clienteConsulta()">Guardar</button>
+                </div>
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-primary" (click)="regresar()">cancelar</button>
+                </div>                
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
