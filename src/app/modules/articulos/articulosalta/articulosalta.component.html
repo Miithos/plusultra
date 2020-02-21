@@ -21,7 +21,8 @@
             <div class="form-group row">
             <label for="inputName" class="col-sm-2 col-form-label">Descripci&oacute;n:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputName" placeholder="descripcion" formControlName="descripcion">
+                <input type="text" class="form-control" id="inputName" placeholder="descripcion" formControlName="descripcion"
+                    appRestringirTipo [permitir]="'letras'" [mayusculas] = "false">
                 <span
                   *ngIf="articulosForm.controls['descripcion'].invalid && articulosForm.controls['descripcion'].touched"
                   class="help-block text-danger"
@@ -31,7 +32,8 @@
             <div class="form-group row">
             <label for="inputapp" class="col-sm-2 col-form-label">Modelo:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputapp" placeholder="modelo" formControlName="modelo">
+                <input type="text" class="form-control" id="inputapp" placeholder="modelo" formControlName="modelo"
+                    appRestringirTipo [permitir]="'texto'" [mayusculas] = "false">
                 <span
                   *ngIf="articulosForm.controls['modelo'].invalid && articulosForm.controls['modelo'].touched"
                   class="help-block text-danger"
@@ -41,7 +43,8 @@
             <div class="form-group row">
             <label for="inputapm" class="col-sm-2 col-form-label">Precio:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputapm" placeholder="precio" formControlName="precio">
+                <input type="text" class="form-control" id="inputapm" placeholder="precio" formControlName="precio"
+                    appRestringirTipo [permitir]="'numeros'">
                 <span
                   *ngIf="articulosForm.controls['precio'].invalid && articulosForm.controls['precio'].touched"
                   class="help-block text-danger"
@@ -51,7 +54,8 @@
             <div class="form-group row">
             <label for="inputrfc" class="col-sm-2 col-form-label">Existencia:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputrfc" placeholder="existencia" formControlName="existencia">
+                <input type="text" class="form-control" id="inputrfc" placeholder="existencia" formControlName="existencia"
+                    appRestringirTipo [permitir]="'numeros'">
                 <span
                   *ngIf="articulosForm.controls['existencia'].invalid && articulosForm.controls['existencia'].touched"
                   class="help-block text-danger"

@@ -8,7 +8,8 @@
             <div class="form-group row">
             <label for="inputName" class="col-sm-2 col-form-label">Tasa Financiamiento:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputName" placeholder="tasa" formControlName="tasa">
+                <input type="text" class="form-control" id="inputName" placeholder="tasa" formControlName="tasa"
+                    appRestringirTipo [permitir]="'numeros'">
                 <span
                   *ngIf="configuracionForm.controls['tasa'].invalid && configuracionForm.controls['tasa'].touched"
                   class="help-block text-danger"
@@ -18,7 +19,8 @@
             <div class="form-group row">
             <label for="inputapp" class="col-sm-2 col-form-label">% Enganche:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputapp" placeholder="enganche" formControlName="enganche">
+                <input type="text" class="form-control" id="inputapp" placeholder="enganche" formControlName="enganche"
+                    appRestringirTipo [permitir]="'numeros'">
                 <span
                   *ngIf="configuracionForm.controls['enganche'].invalid && configuracionForm.controls['enganche'].touched"
                   class="help-block text-danger"
@@ -28,7 +30,8 @@
             <div class="form-group row">
             <label for="inputapm" class="col-sm-2 col-form-label">Plazo M&aacute;ximo:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputapm" placeholder="plaza" formControlName="plaza">
+                <input type="text" class="form-control" id="inputapm" placeholder="plaza" formControlName="plaza"
+                    appRestringirTipo [permitir]="'numeros'">
                 <span
                   *ngIf="configuracionForm.controls['plaza'].invalid && configuracionForm.controls['plaza'].touched"
                   class="help-block text-danger"

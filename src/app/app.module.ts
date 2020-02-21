@@ -14,6 +14,8 @@ import { ClientesaltaComponent } from './modules/clientes/clientesalta/clientesa
 import { ConfiguracionComponent } from './modules/configuracion/configuracion.component';
 import { ArticulosComponent } from './modules/articulos/articulos.component';
 import { ArticulosaltaComponent } from './modules/articulos/articulosalta/articulosalta.component';
+import { DirectivesModule } from './directivas/directives.module';
+
 
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -36,7 +38,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    DirectivesModule
     
   ],
   providers: [],

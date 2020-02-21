@@ -18,7 +18,8 @@
             <div class="form-group row">
             <label for="inputName" class="col-sm-2 col-form-label">Nombre:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputName" placeholder="Nombre" formControlName="nombre">
+                <input type="text" class="form-control" id="inputName" placeholder="Nombre" formControlName="nombre"
+                    appRestringirTipo [permitir]="'letras'" [mayusculas] = "false">
                 <span
                   *ngIf="clientesForm.controls['nombre'].invalid && clientesForm.controls['nombre'].touched"
                   class="help-block text-danger"
@@ -28,7 +29,8 @@
             <div class="form-group row">
             <label for="inputapp" class="col-sm-2 col-form-label">Apellido Paterno:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputapp" placeholder="Apellido Paterno" formControlName="appaterno">
+                <input type="text" class="form-control" id="inputapp" placeholder="Apellido Paterno" formControlName="appaterno"
+                    appRestringirTipo [permitir]="'letras'" [mayusculas] = "false">
                 <span
                   *ngIf="clientesForm.controls['appaterno'].invalid && clientesForm.controls['appaterno'].touched"
                   class="help-block text-danger"
@@ -38,7 +40,8 @@
             <div class="form-group row">
             <label for="inputapm" class="col-sm-2 col-form-label">Apellido Materno:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputapm" placeholder="Apellido Materno" formControlName="apmaterno">
+                <input type="text" class="form-control" id="inputapm" placeholder="Apellido Materno" formControlName="apmaterno"
+                    appRestringirTipo [permitir]="'letras'" [mayusculas] = "false">
                 <span
                   *ngIf="clientesForm.controls['apmaterno'].invalid && clientesForm.controls['apmaterno'].touched"
                   class="help-block text-danger"
@@ -48,7 +51,8 @@
             <div class="form-group row">
             <label for="inputrfc" class="col-sm-2 col-form-label">RFC:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputrfc" placeholder="RFC" formControlName="rfc">
+                <input type="text" class="form-control" id="inputrfc" placeholder="RFC" formControlName="rfc"
+                    appRestringirTipo [permitir]="'serie'">
                 <span
                   *ngIf="clientesForm.controls['rfc'].invalid && clientesForm.controls['rfc'].touched"
                   class="help-block text-danger"
